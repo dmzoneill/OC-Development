@@ -1,0 +1,19 @@
+# Delivered by puppet
+<%# environments/default/modules/intel-puppet-config/templates/puppet.erb %>
+[main]
+	certname = puppetclient.intel.com
+	#server = <%= @fileserver %>
+	pluginsync = true
+	runinterval = 180
+	node_name = facter
+	node_name_fact = fqdn
+	report = true
+	environment = <%= @intelenv %>
+
+[agent]
+	certname = puppetclient.intel.com
+	node_name = facter
+	node_name_fact = fqdn
+	pluginsync = true
+	report = true
+	environment = <%= @intelenv %>

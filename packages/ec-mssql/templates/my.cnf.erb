@@ -1,0 +1,24 @@
+# Delivered by puppet
+<%# environments/default/modules/ec-mysql/templates/mysql.cnf.erb %>
+[mysqld]
+query_cache_size=<%= @mysql_query_cache_size %> # 0
+binlog_format=<%= @mysql_binlog_format %> # ROW
+default_storage_engine=<%= @mysql_default_storage_engine %> #innodb
+innodb_autoinc_lock_mode=<%= @mysql_innodb_autoinc_lock_mode %> # 2
+innodb_doublewrite=<%= @mysql_innodb_doublewrite %> # 1
+datadir=<%= @mysql_datadir %> #/var/lib/mysql
+innodb_buffer_pool_size=<%= @mysql_innodb_buffer_pool_size %> #512M
+innodb_log_file_size=<%= @mysql_innodb_log_file_size %> #100M
+innodb_file_per_table
+innodb_flush_log_at_trx_commit=<%= @mysql_innodb_flush_log_at_trx_commit %> # 2
+wsrep_provider=<%= @mysql_wsrep_provider %> #/usr/lib/galera/libgalera_smm.so
+wsrep_provider_options=<%= @mysql_wsrep_provider_options %> # "gcache.size=32G"
+wsrep_cluster_address=<%= @mysql_wsrep_cluster_address %> # gcomm://192.168.0.1,192.168.0.2,192.168.0.3
+wsrep_cluster_name=<%= @mysql_wsrep_cluster_name %> # 'my_galera_cluster'
+wsrep_node_address=<%= @mysql_wsrep_node_address %> # '192.168.0.2'
+wsrep_node_name=<%= @mysql_wsrep_node_name %> # 'node2'
+wsrep_sst_method=<%= @mysql_wsrep_sst_method %> # xtrabackup
+wsrep_sst_auth=<%= @mysql_wsrep_sst_auth %> # root:rootpa$$
+wsrep_node_incoming_address=<%= @mysql_wsrep_node_incoming_address %> # '192.168.10.2'
+wsrep_sst_donor=<%= @mysql_wsrep_sst_donor %> # 'node3'
+wsrep_slave_threads=<%= @mysql_wsrep_slave_threads %> # 16

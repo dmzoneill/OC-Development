@@ -1,0 +1,6 @@
+# Delivered by puppet
+Acquire::http::Proxy "http://<%= @proxyfqdn %>:<%= @proxyport %>/";
+Acquire::https::Proxy "http://<%= @proxyfqdn %>:<%= @proxyport %>/";
+Acquire::http::Proxy {
+    silvpm.ir.intel.com DIRECT;
+};

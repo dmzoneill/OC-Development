@@ -1,0 +1,30 @@
+{
+    "packages_linux" :[ 
+        "apt",
+        "ec-ufw",
+        "ec-puppet-config",
+        "ec-apt-repos",
+        "ec-resolv",
+        "ec-ypclient",
+        "ec-autofs",
+        "ec-umap",
+        "ec-proxy",
+        "ec-mysql",
+        "ec-apache",
+        "ec-ddns",
+        "ec-ntp",
+        "ec-root_password",
+        "ec-timezone",
+        "ec-vasclient"
+    ],
+
+    "packages_windows" :[ 
+        "ec-iis",
+        "ec-mssql"
+    ],
+
+    "domain" : "ir.intel.com",
+    "proxy::host" : "cache",
+    "proxy::port" : "911",
+	"intelenv" : "development_master"
+}
