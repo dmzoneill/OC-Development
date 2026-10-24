@@ -1,0 +1,3 @@
+# Vendored puppetlabs-apt 1.4.0 module (https://github.com/puppetlabs/puppetlabs-apt). Its metadata.json lists
+# md5 file checksums (e.g. manifests/key.pp, spec/system/apt_key_spec.rb) that gitleaks flags as generic-api-key false positives.
+packages/apt/metadata.json
